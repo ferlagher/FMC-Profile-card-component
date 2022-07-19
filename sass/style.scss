@@ -67,6 +67,7 @@ main {
     border-radius: 0.875rem;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 1rem 2rem 1rem rgba(0, 0, 0, 0.15);
     &::after {
         content: '';
         position: absolute;
