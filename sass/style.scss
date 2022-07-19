@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$color-cyan: #19a2ae;
+$color-dark-blue: #2d3248;
+$color-grayish-blue: #6a6f81;
+$color-gray: rgb(150, 150, 150, 0.25);
+$color-white: #fff;
+
+$font-family: 'Kumbh Sans', sans-serif;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+h1, h2 {
+    font-size: 1.125rem;
+    font-weight: $font-weight-bold;
+    color: $color-dark-blue;
+    span {
+        font-weight: $font-weight-regular;
+        color: $color-grayish-blue;
+    }
+}
+
+h1 {
+    padding-top: 1em;
+}
+
+p {
+    font-size: 0.9375rem;
+    padding-top: 1em;
+}
+
+sub {
+    font-size: 0.625rem;
+    letter-spacing: 0.15em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    color: $color-grayish-blue;
+    line-height: 1em;
+    background-color: $color-cyan;
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right 50vw bottom 50vh , 50vw 50vh;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1em;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: $color-white;
+    width: 20rem;
+    border-radius: 0.875rem;
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 8.75rem;
+        width: 100%;
+        background-image: url(../images/bg-pattern-card.svg);
+        background-position: center;
+    }
+    &-body {
+        margin-top: 8.75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.625em;
+        padding-top: 0;
+        img {
+            z-index: 1;
+            border: 0.35rem solid $color-white;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            margin-bottom: -52px;
+        }
+    }
+    &-footer {
+        display: flex;
+        justify-content: space-around;
+        border-top: solid 1px $color-gray;
+        padding: 1.625em;
+        .stats{
+            text-align: center;
+        }
+    }
+}
+
+footer {
+    font-size: 0.6875rem;
+    color: $color-dark-blue;
+    a {
+        color: $color-white;
+        text-decoration: none;
+    }
+}
