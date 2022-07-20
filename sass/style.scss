@@ -10,7 +10,7 @@ $font-family: 'Kumbh Sans', sans-serif;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
-h1, h2 {
+h1, b {
     font-size: 1.125rem;
     font-weight: $font-weight-bold;
     color: $color-dark-blue;
@@ -27,11 +27,6 @@ h1 {
 p {
     font-size: 0.9375rem;
     padding-top: 1em;
-}
-
-sub {
-    font-size: 0.625rem;
-    letter-spacing: 0.15em;
 }
 
 * {
@@ -93,13 +88,21 @@ main {
             margin-bottom: -52px;
         }
     }
-    &-footer {
+    ul {
         display: flex;
         justify-content: space-around;
         border-top: solid 1px $color-gray;
         padding: 1.625em;
-        .stats{
-            text-align: center;
+        list-style: none;
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span {
+                font-size: 0.625rem;
+                letter-spacing: 0.15em;
+                padding-top: 0.8em;
+            }
         }
     }
 }
